@@ -33,7 +33,7 @@
 
 \usepackage{hyperref}
 \usepackage{amsmath, amssymb}
-
+\usepackage{bbm}
 %%% HEADERS & FOOTERS
 \usepackage{fancyhdr} % This should be set AFTER setting up the page geometry
 \pagestyle{fancy} % options: empty , plain , fancy
@@ -134,7 +134,7 @@ Quelques propriétés :
 		\mathcal{O}\left(\left(\frac{K}{3}\right)^{\bar m} N\log{N}\right)
 	\end{equation}	
 \end{enumerate}
-\raggedleft\includegraphics[width=1.2\textwidth]{scat_station}
+\includegraphics[width=1.2\textwidth]{scat_station}
 Quelques applications :
 \begin{enumerate}
 	\item Processus stationnaires, les coefficients de scattering sont aussi stationaires, la variance est conservée
@@ -165,6 +165,64 @@ Quelques références :
 \end{enumerate}
 
 \section{Wavelet leaders}
+	Quelques définitions, pour $x$ un signal, $a$ l'echelle, $k$ position et $T_X(a,k)$ une quantité multi-échelle :
+	\begin{enumerate}
+		\item Fonction de structure :
+			\begin{equation}
+				S(a,q) = \frac{1}{n_a}\sum_{k=1}^{n_a} |T_x(a,k)|^q = \mathbb{E}_{k\in\lambda_a} |T_x(a,k)|^q \sim a^{\zeta(q)}
+			\end{equation}
+			correspond au $q$-ème moment de $T_x(a,\cdot)$ (donc un moment généralisé de $x$ à l'échelle $a$) en donnant le même poids à tous les $n_a$ coefficients accessibles à l'échelle $a$ (donc invariant par tranlation). 
+		\item Fonction d'échelle $\zeta(q)$ donne le taux de croissance de $S(a,q)$ (en fonction de $a$).
+		\item Régularité en $u$ :
+			\begin{equation}
+				h(u) = \liminf_{a\to 0} \frac{\log(T_x(a, k(u))}{log(a)}
+			\end{equation}
+			donne la régularité (minimale) du signal en $u$ aux échelles les plus fines.\footnote{Si $h$ ne dépend pas de $u$, alors $h = \zeta(1)$ (?)} 
+	\end{enumerate}
+	Et en adaptant les définitions précédentes aux coefficients d'ondelettes
+	\begin{align}
+		c_{j,k}^{(i)} 	&= \int_{\mathbb{R}^d} X(u)2^{-dj}\psi^{(i)}(2^{-j}u -k) \,du\\
+					&= \langle X, \tilde\psi_{j,k}^{(i)} \rangle = X\star \tilde\psi_{j}^{(i)}(k)
+	\end{align}
+	et pour alléger les notations, on peut poser
+	\begin{equation}
+		c_{\lambda}^p := \sum_i |c_{\lambda}^{(i)}|^p,\quad\text{où $\lambda=(j,k) $},
+	\end{equation}
+	 et on a alors:
+	\begin{enumerate}
+		\item Fonction de structure :
+			\begin{equation}
+				S(j,p) = 2^{dj}\sum_k\sum_i |c_{j,k}^{(i)}|^p = 2^{dj}\sum_k c_{j,k}^p
+			\end{equation}
+		\item Fonction d'échelle :
+			\begin{equation}
+				\eta(p) = \liminf_{j\to-\infty} \frac{\log(S(j,q))}{\log(2^j)}
+			\end{equation}
+		\item Leaders :
+			\begin{equation}
+				l^p(j,k) = \left( \sum_{j'\leq j, \lambda'\subset 3\lambda} 2^{-d(j-j')} c_{\lambda'}^p \right)^{\frac{1}{p}}
+			\end{equation}
+		\item $p$-exposant :
+			\begin{equation}
+				h_p(u) = \liminf_{j\to -\infty} \frac{\log(l_{\lambda_j(u)}^{(p)})}{\log(2^j)}
+			\end{equation}
+	\end{enumerate}
 
+	\subsection{Leaders et coefficients de scattering}
+	Le cas $p=\infty$ des leaders correspond à la définition classique des wavelets leaders :
+	\begin{equation}
+		l_\lambda^{p=\infty} = \sup_{\lambda'\subset 3\lambda}|c_{\lambda'}^{(i)}| = \sup_{\lambda'} |c_{\lambda'}|.
+	\end{equation}
+	Le cas $p=1$ semble correspondre à la norme 1 des coefficients de scattering à une couche avec des fréquences arbitrairement grandes :
+	\begin{align}
+		l_\lambda^{p=1} 	&:= \sum_{j'\leq j, \lambda' \subset 3\lambda} \sum_i |c_{\lambda'}^{(i)}| 2^{-d(j-j')} \\
+						&= 2^{-dj}\sum_i \sum_{j' \leq j} \sum_{\lambda_{j'} \subset 3\lambda} \sum_{k\in \lambda_{j'}} |c_{j',k}^{(i)}| 2^{dj'} \\
+						&= 2^{-dj}\sum_i \sum_{j' \leq j} \sum_{\lambda_{j'} \subset 3\lambda} \sum_{k\in \lambda_{j'}} |X\star\tilde\psi_{j'}^{(i)}| (k) \\
+						&= 2^{-dj}\sum_i \sum_{j' \leq j} \sum_{\lambda_{j'} \subset 3\lambda} \sum_{k\in \mathbb{Z}^d} |X\star\tilde\psi_{j'}^{(i)}| (k) \mathbbm{1}_{3\lambda}(k)\\
+						&= 2^{-dj}\sum_i \sum_{j' \leq j} \sum_{k\in \mathbb{Z}^d} |X\star\tilde\psi_{j'}^{(i)}| (k) \mathbbm{1}_{3\lambda}(k)\\
+						&= 2^{-dj}\sum_i \sum_{j' \leq j} \sum_{k\in \mathbb{Z}^d} |X\star\tilde\psi_{j'}^{(i)}| \star \mathbbm{1}_{[-2^{j'}, 2^{j'}]^d}(2^j k)\\
+						&= 2^{-dj}\sum_i \sum_{j' \leq j} \sum_{k\in \mathbb{Z}^d} S^{(i)}[j']x(k)\\
+	\end{align}
+	où $S^{(i)}[j']x(k)$ correspondent à des coefficients de scattering pour lesquels on a remplacé la convolution par une gaussienne $\phi_J$ par la convolution avec une indicatrice sur un cube dyadique.
 
 \end{document}

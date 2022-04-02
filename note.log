@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.10.11)  1 APR 2022 17:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.10.11)  2 APR 2022 18:27
 entering extended mode
 **./note.tex
 (note.tex
@@ -357,8 +357,14 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-)) (C:\Users\davyl\AppData\Local\Programs\MiKTeX\tex/latex/fancyhdr\fancyhdr.st
-y
+)) (C:\Users\davyl\AppData\Local\Programs\MiKTeX\tex/latex/bbm\bbm.sty
+Package: bbm 1999/03/15 V 1.2 provides fonts for set symbols - TH
+LaTeX Font Info:    Overwriting math alphabet `\mathbbm' in version `bold'
+(Font)                  U/bbm/m/n --> U/bbm/bx/n on input line 33.
+LaTeX Font Info:    Overwriting math alphabet `\mathbbmss' in version `bold'
+(Font)                  U/bbmss/m/n --> U/bbmss/bx/n on input line 35.
+)
+(C:\Users\davyl\AppData\Local\Programs\MiKTeX\tex/latex/fancyhdr\fancyhdr.sty
 Package: fancyhdr 2021/01/28 v4.0.1 Extensive control of page headers and foote
 rs
 \f@nch@headwidth=\skip64
@@ -370,7 +376,8 @@ rs
 \f@nch@O@erf=\skip70
 \f@nch@O@olf=\skip71
 \f@nch@O@orf=\skip72
-) (C:\Users\davyl\AppData\Local\Programs\MiKTeX\tex/latex/sectsty\sectsty.sty
+)
+(C:\Users\davyl\AppData\Local\Programs\MiKTeX\tex/latex/sectsty\sectsty.sty
 Package: sectsty 2002/02/25 v2.0.2 Commands to change all sectional heading sty
 les
 
@@ -566,7 +573,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 72--75
 
  []
 
-<wav_morlet.png, id=12, 461.92575pt x 220.4235pt>
+<wav_morlet.png, id=16, 461.92575pt x 220.4235pt>
 File: wav_morlet.png Graphic file (type png)
 <use wav_morlet.png>
 Package pdftex.def Info: wav_morlet.png  used on input line 76.
@@ -580,7 +587,7 @@ Overfull \hbox (17.0pt too wide) in paragraph at lines 76--77
 
 {C:/Users/davyl/AppData/Local/MiKTeX/pdftex/config/pdftex.map} <./wav_morlet.pn
 g>]
-<scat_coef.png, id=39, 445.665pt x 308.95425pt>
+<scat_coef.png, id=43, 445.665pt x 308.95425pt>
 File: scat_coef.png Graphic file (type png)
 <use scat_coef.png>
 Package pdftex.def Info: scat_coef.png  used on input line 95.
@@ -590,7 +597,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 104--106
 
  []
 
-<scat_net.png, id=40, 896.148pt x 479.391pt>
+<scat_net.png, id=44, 896.148pt x 479.391pt>
 File: scat_net.png Graphic file (type png)
 <use scat_net.png>
 Package pdftex.def Info: scat_net.png  used on input line 107.
@@ -601,18 +608,18 @@ Overfull \hbox (17.0pt too wide) in paragraph at lines 107--108
  []
 
 [2 <./scat_coef.png>] [3 <./scat_net.png>]
-<scat_station.png, id=69, 904.5795pt x 464.33475pt>
+<scat_station.png, id=73, 904.5795pt x 464.33475pt>
 File: scat_station.png Graphic file (type png)
 <use scat_station.png>
 Package pdftex.def Info: scat_station.png  used on input line 137.
 (pdftex.def)             Requested size: 501.90312pt x 257.63797pt.
 
 Overfull \hbox (83.64944pt too wide) in paragraph at lines 137--140
- []
+[]
  []
 
 [4 <./scat_station.png>]
-<scat_clas.png, id=83, 440.24475pt x 172.84575pt>
+<scat_clas.png, id=87, 440.24475pt x 172.84575pt>
 File: scat_clas.png Graphic file (type png)
 <use scat_clas.png>
 Package pdftex.def Info: scat_clas.png  used on input line 159.
@@ -623,44 +630,52 @@ Overfull \hbox (4.57784pt too wide) in paragraph at lines 163--164
 topy dic-tio-nary learn-ing\OT1/cmr/m/n/10.95 , \OT1/cmr/m/sc/10.95 Zarka,
  []
 
-[5 <./scat_clas.png>] (note.aux)
+[5 <./scat_clas.png>] [6]
+LaTeX Font Info:    Trying to load font information for U+bbm on input line 225
+.
+
+(C:\Users\davyl\AppData\Local\Programs\MiKTeX\tex/latex/bbm\ubbm.fd
+File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
+) [7]
+(note.aux)
 Package rerunfilecheck Info: File `note.out' has not changed.
-(rerunfilecheck)             Checksum: 8BF546CD0F9D2B558604B46698962E19;267.
+(rerunfilecheck)             Checksum: 992541D37890975E6B68A92BBA56AAD5;521.
  ) 
 Here is how much of TeX's memory you used:
- 11836 strings out of 478927
- 180719 string characters out of 2852534
- 491124 words of memory out of 3000000
- 29482 multiletter control sequences out of 15000+600000
- 414133 words of font info for 68 fonts, out of 8000000 for 9000
+ 11915 strings out of 478927
+ 182164 string characters out of 2852534
+ 496305 words of memory out of 3000000
+ 29522 multiletter control sequences out of 15000+600000
+ 415437 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 69i,12n,79p,583b,463s stack positions out of 5000i,500n,10000p,200000b,80000s
-<C:/Users/davyl/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
-cmcsc10.pfb><C:/Users/davyl/AppData/Local/Programs/MiKTeX/fonts/type1/public/am
-sfonts/cm/cmex10.pfb><C:/Users/davyl/AppData/Local/Programs/MiKTeX/fonts/type1/
-public/amsfonts/cm/cmmi10.pfb><C:/Users/davyl/AppData/Local/Programs/MiKTeX/fon
-ts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/davyl/AppData/Local/Programs/Mi
-KTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/davyl/AppData/Local/Pro
-grams/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/davyl/AppData/L
-ocal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/davyl/A
-ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users
-/davyl/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><
-C:/Users/davyl/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr
-6.pfb><C:/Users/davyl/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts
-/cm/cmr8.pfb><C:/Users/davyl/AppData/Local/Programs/MiKTeX/fonts/type1/public/a
-msfonts/cm/cmr9.pfb><C:/Users/davyl/AppData/Local/Programs/MiKTeX/fonts/type1/p
-ublic/amsfonts/cm/cmss12.pfb><C:/Users/davyl/AppData/Local/Programs/MiKTeX/font
-s/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/davyl/AppData/Local/Programs/Mi
-KTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/davyl/AppData/Local/Pro
-grams/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/davyl/AppData/L
-ocal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users/davyl/A
-ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/User
-s/davyl/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb
-><C:/Users/davyl/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symb
-ols/msbm10.pfb>
-Output written on note.pdf (5 pages, 903776 bytes).
+ 69i,12n,79p,583b,461s stack positions out of 5000i,500n,10000p,200000b,80000s
+ <C:\Users\davyl\AppData\Local\MiKTeX\fonts/pk/ljfour/public/bbm/dpi657\bbm10
+.pk><C:/Users/davyl/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/c
+m/cmcsc10.pfb><C:/Users/davyl/AppData/Local/Programs/MiKTeX/fonts/type1/public/
+amsfonts/cm/cmex10.pfb><C:/Users/davyl/AppData/Local/Programs/MiKTeX/fonts/type
+1/public/amsfonts/cm/cmmi10.pfb><C:/Users/davyl/AppData/Local/Programs/MiKTeX/f
+onts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/davyl/AppData/Local/Programs/
+MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/davyl/AppData/Local/P
+rograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/davyl/AppData
+/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/davyl
+/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Use
+rs/davyl/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb
+><C:/Users/davyl/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/c
+mr6.pfb><C:/Users/davyl/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
+ts/cm/cmr8.pfb><C:/Users/davyl/AppData/Local/Programs/MiKTeX/fonts/type1/public
+/amsfonts/cm/cmr9.pfb><C:/Users/davyl/AppData/Local/Programs/MiKTeX/fonts/type1
+/public/amsfonts/cm/cmss12.pfb><C:/Users/davyl/AppData/Local/Programs/MiKTeX/fo
+nts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/davyl/AppData/Local/Programs/
+MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/davyl/AppData/Local/P
+rograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/davyl/AppData
+/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users/davyl
+/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Us
+ers/davyl/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.p
+fb><C:/Users/davyl/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/sy
+mbols/msbm10.pfb>
+Output written on note.pdf (7 pages, 924867 bytes).
 PDF statistics:
- 196 PDF objects out of 1000 (max. 8388607)
- 41 named destinations out of 1000 (max. 500000)
- 42 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 247 PDF objects out of 1000 (max. 8388607)
+ 70 named destinations out of 1000 (max. 500000)
+ 50 words of extra memory for PDF output out of 10000 (max. 10000000)
 
