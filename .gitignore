@@ -4,3 +4,7 @@
 *.log
 *.aux
 *.aux
+*.gz
+*.aux
+*.log
+*.gz

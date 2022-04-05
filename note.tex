@@ -182,7 +182,7 @@ Quelques références :
 	Et en adaptant les définitions précédentes aux coefficients d'ondelettes
 	\begin{align}
 		c_{j,k}^{(i)} 	&= \int_{\mathbb{R}^d} X(u)2^{-dj}\psi^{(i)}(2^{-j}u -k) \,du\\
-					&= \langle X, \tilde\psi_{j,k}^{(i)} \rangle = X\star \tilde\psi_{j}^{(i)}(k)
+					&= \langle X, \psi_{j,k}^{(i)} \rangle = X\star \psi_{j}^{(i)}(k)
 	\end{align}
 	et pour alléger les notations, on peut poser
 	\begin{equation}
@@ -208,6 +208,7 @@ Quelques références :
 			\end{equation}
 	\end{enumerate}
 
+	\includegraphics[width=0.8\textwidth]{p_lead}
 	\subsection{Leaders et coefficients de scattering}
 	Le cas $p=\infty$ des leaders correspond à la définition classique des wavelets leaders :
 	\begin{equation}
@@ -217,10 +218,10 @@ Quelques références :
 	\begin{align}
 		l_\lambda^{p=1} 	&:= \sum_{j'\leq j, \lambda' \subset 3\lambda} \sum_i |c_{\lambda'}^{(i)}| 2^{-d(j-j')} \\
 						&= 2^{-dj}\sum_i \sum_{j' \leq j} \sum_{\lambda_{j'} \subset 3\lambda} \sum_{k\in \lambda_{j'}} |c_{j',k}^{(i)}| 2^{dj'} \\
-						&= 2^{-dj}\sum_i \sum_{j' \leq j} \sum_{\lambda_{j'} \subset 3\lambda} \sum_{k\in \lambda_{j'}} |X\star\tilde\psi_{j'}^{(i)}| (k) \\
-						&= 2^{-dj}\sum_i \sum_{j' \leq j} \sum_{\lambda_{j'} \subset 3\lambda} \sum_{k\in \mathbb{Z}^d} |X\star\tilde\psi_{j'}^{(i)}| (k) \mathbbm{1}_{3\lambda}(k)\\
-						&= 2^{-dj}\sum_i \sum_{j' \leq j} \sum_{k\in \mathbb{Z}^d} |X\star\tilde\psi_{j'}^{(i)}| (k) \mathbbm{1}_{3\lambda}(k)\\
-						&= 2^{-dj}\sum_i \sum_{j' \leq j} \sum_{k\in \mathbb{Z}^d} |X\star\tilde\psi_{j'}^{(i)}| \star \mathbbm{1}_{[-2^{j'}, 2^{j'}]^d}(2^j k)\\
+						&= 2^{-dj}\sum_i \sum_{j' \leq j} \sum_{\lambda_{j'} \subset 3\lambda} \sum_{k\in \lambda_{j'}} |X\star\psi_{j'}^{(i)}| (k) \\
+						&= 2^{-dj}\sum_i \sum_{j' \leq j} \sum_{\lambda_{j'} \subset 3\lambda} \sum_{k\in \mathbb{Z}^d} |X\star\psi_{j'}^{(i)}| (k) \mathbbm{1}_{3\lambda}(k)\\
+						&= 2^{-dj}\sum_i \sum_{j' \leq j} \sum_{k\in \mathbb{Z}^d} |X\star\psi_{j'}^{(i)}| (k) \mathbbm{1}_{3\lambda}(k)\\
+						&= 2^{-dj}\sum_i \sum_{j' \leq j} \sum_{k\in \mathbb{Z}^d} |X\star\psi_{j'}^{(i)}| \star \mathbbm{1}_{[-2^{j'}, 2^{j'}]^d}(2^j k)\\
 						&= 2^{-dj}\sum_i \sum_{j' \leq j} \sum_{k\in \mathbb{Z}^d} S^{(i)}[j']x(k)\\
 	\end{align}
 	où $S^{(i)}[j']x(k)$ correspondent à des coefficients de scattering pour lesquels on a remplacé la convolution par une gaussienne $\phi_J$ par la convolution avec une indicatrice sur un cube dyadique.
